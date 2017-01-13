@@ -1,0 +1,3 @@
+class Directions::West
+
+end

@@ -1,0 +1,12 @@
+/.bundle
+/log/*
+!/log/.keep
+/tmp
+.DS_Store
+.rvmrc
+/coverage
+.powrc
+/public/system
+/public/uploads
+**/log/*.log
+.idea/

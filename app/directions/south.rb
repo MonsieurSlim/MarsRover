@@ -1,0 +1,3 @@
+class Directions::South
+
+end
