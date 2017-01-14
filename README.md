@@ -27,13 +27,20 @@ at position 1 on the horizontal axis, position 2 on the vertical axis and would 
 As a result of following these commands, a rover staring at 1 2 E in this zone would land up at 4 3 S.
 You are to design a program which takes a text file in the format as described above and then displays its resulting rover location to the console.
 
+** Design decisions **
+
+I feel the major moving part of this application would be the direction in which the rover moves.
+I have therefore made each direction a class such that when we decide we want the rover to move in new ways in addition to the current ways, we can add new classes.
+I think this makes the code more maintainable
+
 
 **To run the application:**
 
 - Copy the commands test case you'd like to use into the app/public/commands.txt file
 - cd into the MarsRover directory
 - run bundle install
-- $ ```ruby app/mars_rover.rb```
+- ```$ ruby app/mars_rover.rb```
+
 
 **Sample Input:**
 
