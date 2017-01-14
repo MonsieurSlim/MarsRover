@@ -37,7 +37,7 @@ You are to design a program which takes a text file in the format as described a
 
 **To run the application:**
 
-- Copy the commands test case you'd like to use into the *app/public/commands.txt* file
+- Copy the commands test case you'd like to use into the ```app/public/commands.txt``` file
 - cd into the MarsRover directory
 - ```$ bundle install```
 - ```$ ruby app/mars_rover.rb```
