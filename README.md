@@ -1,6 +1,6 @@
-== Mars Rover Challenge Built in Ruby
+# Mars Rover Challenge Built in Ruby
 
-Instructions:
+**Instructions:**
 Rovers have been sent to Mars to survey the terrain and you have been charged with creating their navigation system. These are the specifications you have been given:
 
 * Mars’s surface has been divided into zones and each zone can be modelled as a two­dimensional cartesian grid. The zones have been very carefully surveyed ahead of time and are deemed safe for exploration within the zone’s bounds, as represented by a single cartesian co­ordinate. E.g: (5, 5)
@@ -11,11 +11,11 @@ Rovers have been sent to Mars to survey the terrain and you have been charged wi
 * L ­ rotate 90 degrees to the left
 
 Due to the transmission delay in communicating with the rover on Mars, you are only able to send the rover a list of commands. These commands will be executed by the rover and its resulting location sent back to HQ. This is an example of the list of commands sent to the rover:
-
+```
 8 8
 1 2 E
 M M L M R M M R R M M L
-
+```
 This is how the rover will interpret the commands:
 
 * The first line describes how big the current zone is. This zone’s boundary is at the Cartesian
@@ -28,30 +28,39 @@ As a result of following these commands, a rover staring at 1 2 E in this zone w
 You are to design a program which takes a text file in the format as described above and then displays its resulting rover location to the console.
 
 
-To run the application:
+**To run the application:**
 
 - Copy the commands test case you'd like to use into the app/public/commands.txt file
 - cd into the MarsRover directory
 - run bundle install
-- run ruby app/mars_rover.rb
+- $ ```ruby app/mars_rover.rb```
 
-Sample Input:
+**Sample Input:**
+
+```
 8 8
  1 2 E 
 M M L M R M M R R M M L
+```
 
-Sample Output:
+**Sample Output:**
+
+```
 **********
 3 3 S
 **********
+```
 
 
 
-To run specs:
-* run rspec
+**To run specs:**
+
+```
+$ rspec
+```
 
 
-Improvements
+**Improvements**
 - Add a support directory for rspec so spec commands are read from txt file
 - Add specs for ControlTower and Rover
 
