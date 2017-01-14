@@ -1,4 +1,5 @@
 module Direction
+
   def self.position(direction)
     case direction
       when 'N'
@@ -22,8 +23,9 @@ module Direction
       Direction::South.new
     end
 
-    def move(current_position)
-      x = Integer(current_position[0]) + 1
+    def move(current_position, boundary)
+      new = Integer(current_position[0]) + 1
+      x = (new > Integer(boundary[0])) ? Integer(boundary[0]) : new
       y = Integer(current_position[1])
 
       [x, y]
@@ -44,8 +46,9 @@ module Direction
       Direction::North.new
     end
 
-    def move(current_position)
-      x = Integer(current_position[0]) - 1
+    def move(current_position, boundary)
+      new = Integer(current_position[0]) - 1
+      x = (new > Integer(boundary[0])) ? Integer(boundary[0]) : new
       y = Integer(current_position[1])
 
       [x, y]
@@ -66,9 +69,10 @@ module Direction
       Direction::East.new
     end
 
-    def move(current_position)
+    def move(current_position, boundary)
       x = Integer(current_position[0])
-      y = Integer(current_position[1]) + 1
+      new = Integer(current_position[1]) + 1
+      y = (new > Integer(boundary[1])) ? Integer(boundary[1]) :  new
 
       [x, y]
     end
@@ -88,9 +92,10 @@ module Direction
       Direction::West.new
     end
 
-    def move(current_position)
+    def move(current_position, boundary)
       x = Integer(current_position[0])
-      y = Integer(current_position[1]) - 1
+      new = Integer(current_position[1]) - 1
+      y = (new > Integer(boundary[1])) ? Integer(boundary[1]) :  new
 
       [x, y]
     end

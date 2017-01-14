@@ -16,9 +16,9 @@ describe Direction::West do
   end
 
   describe ".move" do
-    context "given current position (0, 0)" do
+    context "given current position (0, 0) and boundary (5, 5)" do
       it "returns (-1, 0)" do
-        expect(subject.move([0, 0])).to eq([-1, 0])
+        expect(subject.move([0, 0], [5, 5])).to eq([-1, 0])
       end
     end
   end
